@@ -1,18 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "Chrome Extenction Btn-Click-Event",
+  "name": "Chrome Extension Btn-Click-Event",
   "version": "1.0",
   "description": "Estensione che mostra un alert su un click di pulsante",
-  "permissions": ["activeTab"],
+  "permissions": ["activeTab", "http://localhost:8080/*"],
   "background": {
     "service_worker": "background.js"
   },
-  "content_scripts": [
-    {
-      "matches": ["http://localhost:8080/*"],
-      "js": ["content.js"]
-    }
-  ],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
