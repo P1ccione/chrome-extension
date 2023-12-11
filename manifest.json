@@ -3,24 +3,14 @@
   "description": "Estensione che mostra un alert su un click di pulsante",
   "version": "1.0",
   "manifest_version": 3,
-  "background": {
-    "service_worker": "background.js"
-  },
-  "permissions": [
-    "storage",
-    "activeTab",
-    "contextMenus",
-    "bookmarks",
-    "browsingData"
-  ],
+  "permissions": ["storage"],
   "action": {
     "default_popup": "popup.html"
   },
   "content_scripts": [
     {
-      "matches": ["https://*.google.com/*", "http://localhost:8080/*"],
+      "matches": ["http://localhost:8080/*"],
       "js": ["content.js"]
     }
-  ],
-  "options_page": "options/options.html"
+  ]
 }
